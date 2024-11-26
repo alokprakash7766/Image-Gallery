@@ -1,0 +1,242 @@
+body {
+      font-family: Arial, sans-serif;
+      /* animation: fadeIn 1s ease-in-out; */
+      /* padding-top: 70px; */
+      height: 100%;
+     
+  }
+
+  /* .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+  } */
+.text-center{
+      top: 15px;
+      font-weight: 500;
+  }
+  /* #gallery .row {
+      top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+  } */
+
+  /* Image Box Styling with Gradient Border and Blink */
+  /* #gallery .col-md-3 {
+      flex: 1 1 22%;
+      max-width: 22%;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+      border-radius: 8px;
+      animation: blink 2s infinite alternate;
+      background-image: linear-gradient(45deg, #ff6b81, #ff8f00, #00c6ff, #00ff84);
+      background-size: 400%;
+      padding: 5px;
+  } */
+  #gallery {
+      margin-top: 2px;
+      margin-left: 70px;
+  }
+  #gallery .image{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;}
+  #gallery img {
+      margin-left: 20px;
+      margin-top: 30px;
+      width: 300px;
+      left: 10px;
+      height: 350px;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgb(25, 245, 208); 
+      transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+#gallery img:hover{
+      box-shadow: 0 4px 15px rgba(239, 38, 205, 0.8); 
+      transform: translate(5, -5px); 
+      border-radius: 10px;
+      width: 310px;
+      height: 360px;
+      transition: all 0.3s linear ;
+
+}
+  /* #gallery .col-md-3:hover img {
+      transform: scale(1.1);
+      opacity: 0.9;
+  } */
+
+  @keyframes blink {
+      0% {
+          border-color: transparent;
+      }
+
+      50% {
+          border-color: white;
+      }
+
+      100% {
+          border-color: transparent;
+      }
+  }
+  .nav-link{
+      color: #fff;
+      background: hwb(185 11% 6%);
+      font-weight: 600;
+  }
+  .nav-link:hover{
+      color: black;
+      background: #fff;
+
+  }
+
+  .payment-btn {
+      position: relative;
+      overflow: hidden;
+      margin-top: 10px;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: transparent;
+      border: 2px solid transparent;
+      border-radius: 50px;
+      background-image: linear-gradient(45deg, #ff6b81, #ff8f00, #00c6ff, #00ff84);
+      background-size: 400%;
+      transition: all 0.5s ease-in-out;
+  }
+
+  .payment-btn:hover {
+      background-position: right center;
+      color: #fff;
+      box-shadow: 0 0 5px #ff6b81, 0 0 10px #ff6b81, 0 0 15px #ff6b81;
+      transform: rotate(360deg);
+  }
+
+  footer {
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      bottom: 0;
+      margin-right: 60px;
+      height: 50px;
+      width: 100%;
+      background-color: #3dd0ee;
+      color: white;
+      text-align: center;
+      /* padding: 20px; */
+      margin-top: 445px;
+
+  }
+  footer p{
+      margin-left: 50px;
+  }.social-icons{
+      margin-right: 130px;
+      
+  }
+
+
+  .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+      text-decoration: none;
+  }
+  
+
+  .social-icons a:hover {
+      color: #00bfae;
+  }
+
+  /* Admin Section (Hidden initially) */
+  #uploadSection {
+      display: none;
+  }
+
+  /* Fixed WhatsApp Chat Button */
+ 
+  #whatsapp-chat {
+      position: fixed;
+      bottom: 20px; /* Position from the bottom of the page */
+      right: 20px;  /* Position from the right of the page */
+      z-index: 1000;
+  }
+  
+  #whatsapp-chat a {
+      display: block;
+      width: 60px;  /* Width of the WhatsApp icon */
+      height: 60px; /* Height of the WhatsApp icon */
+  }
+  
+  #whatsapp-chat img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease; /* Smooth animation for scaling */
+  }
+  
+  #whatsapp-chat:hover img {
+      transform: scale(1.1); /* Slightly enlarge the WhatsApp icon on hover */
+  }
+  
+  #whatsapp-chat a::after {
+      content: 'Chat with us on WhatsApp'; /* Message displayed when hovering */
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background-color: #25d366;
+      color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: none;
+  }
+  
+  #whatsapp-chat:hover a::after {
+      display: block; /* Show the message when hovering over the icon */
+  }
+  
+
+  /* Fixed Navbar */
+ nav.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      z-index: 1000;
+  }
+  
+  .blinking {
+      animation: blink-animation 1s infinite step-start;
+    }
+    
+    @keyframes blink-animation {
+      0% { visibility: visible; }
+      50% { visibility: hidden; }
+      100% { visibility: visible; }
+    }
+    
+    .color-change {
+      animation: colorAnimation 5s infinite;
+    }
+    
+    @keyframes colorAnimation {
+      0% {
+        color: red; /* Initial color */
+      }
+      25% {
+        color: blue; /* 1st color change */
+      }
+      50% {
+        color: rgb(190, 34, 252); /* 2nd color change */
+      }
+      75% {
+        color: yellow; /* 3rd color change */
+      }
+      100% {
+        color: rgb(36, 212, 235); /* 4th color change */
+      }
+    }
